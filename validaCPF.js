@@ -32,7 +32,7 @@ function verificarDigito(cpf, totalDeDigitos, peso, digitoDeVerificacao) {
   return resto == digito;
 }
 
-function verificarPrimeiroDigito(cpf) {
+function verificaPrimeiroDigito(cpf) {
   const totalDeDigitosPrimeiraParte = 9;
   const peso = 10;
   const digitoDeVerificacao = 10;
@@ -40,7 +40,7 @@ function verificarPrimeiroDigito(cpf) {
   return verificarDigito(cpf, totalDeDigitosPrimeiraParte, peso, digitoDeVerificacao);
 }
 
-function verificarSegundoDigito(cpf) {
+function verificaSegundoDigito(cpf) {
   const totalDeDigitosSegundaParte = 10;
   const peso = 11;
   const digitoDeVerificacao = 11;
@@ -51,9 +51,7 @@ function verificarSegundoDigito(cpf) {
 function validaCPF(cpf) {
   return(
     verificaCPFInvalido(cpf) &&
-    verificarPrimeiroDigito(cpf) &&
-    verificarSegundoDigito(cpf)
+    verificaPrimeiroDigito(cpf) &&
+    verificaSegundoDigito(cpf)
   )
 }
-
-console.log("Valida:", validaCPF('22222222222'));

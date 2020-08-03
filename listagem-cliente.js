@@ -21,6 +21,12 @@ const exibeCliente = ({nome, cpf, id}) => {
       type="button"
       onclick="removeCliente(${id})"> Deletar
     </button>
+    <a
+      href="./edita-clientes.html?id=${id}"
+      class="btn btn-info"
+    >
+      Editar
+    </a>
   `;
 
   linha.innerHTML = conteudoLinha;
