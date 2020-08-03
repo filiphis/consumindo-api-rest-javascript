@@ -1,7 +1,7 @@
 // fetch: Faz a requisição e fica aguardando resposta
 // then: será executado após a promise ser resolvida
 const listarClientes = () => {
-  return fetch('http://localhost:4000/clientes') 
+  return fetch('http://localhost:4000/clientes')
   .then((resposta) => {
     return resposta.json();
   })
@@ -26,4 +26,10 @@ const cadastrarCliente = (nome, cpf) => {
   .then(res => {
     res.body
   })
+}
+
+const deletarCliente = (id) => {
+  return fetch(`http://localhost:4000/clientes/cliente/${id}`, {
+    method: 'DELETE'
+  });
 }

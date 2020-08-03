@@ -2,12 +2,25 @@ let $ = document.querySelector.bind(document);
 
 let corpoTabela = $("[data-conteudo-tabela]");
 
-const exibeCliente = (nome, cpf) => {
+{/* <button class="btn btn-danger" type="button" onClick=(deletarCliente(${id}))>Deletar</button> */}
+
+function removeCliente(id) {
+  if (confirm('Tem certeza que desja remover o cliente ? Ele não poderá ser recuperado !')) {
+    deletarCliente(id);
+  }
+}
+
+const exibeCliente = ({nome, cpf, id}) => {
   const linha = document.createElement('tr');
 
   const conteudoLinha = `
     <td>${nome}</td>
     <td>${cpf}</td>
+    <button
+      class="btn btn-danger"
+      type="button"
+      onclick="removeCliente(${id})"> Deletar
+    </button>
   `;
 
   linha.innerHTML = conteudoLinha;
@@ -15,10 +28,10 @@ const exibeCliente = (nome, cpf) => {
   return linha;
 }
 
-console.log(listarClientes());
 
-listarClientes().then((exibe) => {
-  exibe.map(({nome, cpf}) => {
-    corpoTabela.appendChild(exibeCliente(nome, cpf))
+
+listarClientes().then((clientes) => {
+  clientes.map((cliente) => {
+    corpoTabela.appendChild(exibeCliente(cliente))
   })
 });

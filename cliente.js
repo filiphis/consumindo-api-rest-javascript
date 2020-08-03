@@ -1,42 +1,41 @@
-let $ = document.querySelector.bind(document);
+// let $ = document.querySelector.bind(document);
 
-const informacoesClientes = [
-  {
-    nome: "Luiz",
-    cpf: "11111111111"
-  },
-  {
-    nome: "mozao da minha vida",
-    cpf: "1212313231"
-  },
-  {
-    nome: "Pão de batãtã",
-    cpf: "7897897891"
-  }
-  // {
-  //   nome: "Luiz",
-  //   cpf: "11111111111",
-  // }
-]
-
-// const conteudoLinha = informacoesClientes.map(cliente => `<tr><td>${cliente.nome}</td><td>${cliente.cpf}</td></tr>`).join('');
-
-let corpoTabela = $("[data-conteudo-tabela]");
+// const informacoesClientes = [
+//   {
+//     nome: "Luiz",
+//     cpf: "11111111111"
+//   },
+//   {
+//     nome: "mozao da minha vida",
+//     cpf: "1212313231"
+//   },
+//   {
+//     nome: "Pão de batãtã",
+//     cpf: "7897897891"
+//   }
+//   // {
+//   //   nome: "Luiz",
+//   //   cpf: "11111111111",
+//   // }
+// ]
 
 
-const exibeCliente = (nome, cpf) => {
-  const linha = document.createElement('tr');
+// let corpoTabela = $("[data-conteudo-tabela]");
 
-  const conteudoLinha = `
-    <td>${nome}</td>
-    <td>${cpf}</td>
-  `;
 
-  linha.innerHTML = conteudoLinha;
+// const exibeCliente = (nome, cpf, id) => {
+//   const linha = document.createElement('tr');
 
-  return linha;
-}
+//   const conteudoLinha = `
+//     <td>${nome}</td>
+//     <td>${cpf}</td>
+//   `;
 
-informacoesClientes.map(({nome, cpf}) => {
-  corpoTabela.appendChild(exibeCliente(nome, cpf))
-});
+//   linha.innerHTML = conteudoLinha;
+
+//   return linha;
+// }
+
+// informacoesClientes.map(({nome, cpf, id}) => {
+//   corpoTabela.appendChild(exibeCliente(nome, cpf, id))
+// });
