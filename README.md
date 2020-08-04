@@ -48,6 +48,6 @@ Execute o servidor:
 npm start
 ```
 
-Com o servidor rodando, abra o arquivo **index.html** em seu navegador favorito
-Pronto, visualize o projeto :open_mouth: :satisfied:
+Com o servidor rodando, abra o arquivo **index.html** em seu navegador favorito. 
+ Pronto, visualize o projeto :open_mouth: :satisfied:
 
