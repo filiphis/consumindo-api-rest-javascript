@@ -1,3 +1,7 @@
+function verificaQtdDigitos(cpf) {
+  return cpf.length === 11;
+}
+
 function verificaCPFInvalido(cpf) {
   const cpfsInvalidos = [
     "11111111111",
@@ -50,6 +54,7 @@ function verificaSegundoDigito(cpf) {
 
 function validaCPF(cpf) {
   return(
+    verificaQtdDigitos(cpf) &&
     verificaCPFInvalido(cpf) &&
     verificaPrimeiroDigito(cpf) &&
     verificaSegundoDigito(cpf)

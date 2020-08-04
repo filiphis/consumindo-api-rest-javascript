@@ -8,6 +8,7 @@ formCadastroCliente.addEventListener('submit', function(event) {
 
     if(validaCPF(cpf)){
       cadastrarCliente(nome, cpf);
+      formCadastroCliente.appendChild(mensagemSucesso('Cliente cadastrado com sucesso'));
     } else {
       alert('Ops... o CPF informado está incorreto !');
     }

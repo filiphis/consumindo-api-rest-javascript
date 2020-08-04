@@ -7,6 +7,8 @@ let corpoTabela = $("[data-conteudo-tabela]");
 function removeCliente(id) {
   if (confirm('Tem certeza que desja remover o cliente ? Ele não poderá ser recuperado !')) {
     deletarCliente(id);
+
+    document.location.reload();
   }
 }
 
